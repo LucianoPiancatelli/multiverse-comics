@@ -100,7 +100,7 @@
         <div class="container">
             <p class="mb-1">&copy; {{ now()->year }} Multiverse Comics. Todos los derechos reservados.</p>
             <p class="mb-0 small">
-                Piancatelli Luciano, Gonzalez Brisa, Martinez Tomas, Parcia 1 Portales y Comercio Electronico -DWT4AP
+                Piancatelli Luciano, Gonzalez Brisa, Martinez Tomas, Parcial 2 Portales y Comercio Electronico -DWT4AP
             </p>
         </div>
     </footer>

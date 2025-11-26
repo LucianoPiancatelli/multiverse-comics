@@ -16,10 +16,7 @@
                 <div class="d-flex flex-wrap gap-3">
                     <a href="{{ route('comics.index') }}" class="btn btn-lg btn-glow-primary px-4">Explorar la tienda</a>
                     <a href="{{ route('posts.index') }}" class="btn btn-lg btn-outline-light px-4">Ultimas novedades</a>
-                    @guest
-                        <a href="{{ route('login') }}" class="btn btn-lg btn-light text-dark px-4">Ingresar</a>
-                        <a href="{{ route('register') }}" class="btn btn-lg btn-outline-light px-4">Crear cuenta</a>
-                    @endguest
+                    
                 </div>
             </div>
             <div class="col-lg-6">

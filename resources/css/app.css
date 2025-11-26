@@ -163,13 +163,26 @@ body {
     color: rgba(226, 232, 240, 0.6);
 }
 
-/* Fix Bootstrap vs Tailwind conflict */
+
 .collapse {
     visibility: visible !important;
 }
-.navbar-collapse.collapse:not(.show) {
-    display: none !important;
+
+/* 2. REGLA PARA MÓVILES (Pantallas menores a 992px) */
+/* Solo aquí ocultamos el menú si no tiene la clase .show */
+@media (max-width: 991.98px) {
+    .navbar-collapse.collapse:not(.show) {
+        display: none !important;
+    }
 }
-.navbar-collapse.collapse.show {
-    display: block !important;
+
+/* 3. REGLA PARA DESKTOP (Pantallas mayores a 992px) */
+/* Aquí obligamos al menú a ser flexible y visible siempre */
+@media (min-width: 992px) {
+    .navbar-collapse.collapse {
+        display: flex !important;
+        height: auto !important;
+        visibility: visible !important;
+        background-color: transparent !important; /* Evitar fondos raros */
+    }
 }
