@@ -2,17 +2,26 @@
 
 namespace App\Providers;
 
-use Illuminate\Pagination\Paginator;
 use Illuminate\Support\ServiceProvider;
+use Illuminate\Routing\UrlGenerator; // <--- ASEGÚRATE DE AGREGAR ESTA LÍNEA
 
 class AppServiceProvider extends ServiceProvider
 {
+    /**
+     * Register any application services.
+     */
     public function register(): void
     {
+        //
     }
 
-    public function boot(): void
+    /**
+     * Bootstrap any application services.
+     */
+    public function boot(UrlGenerator $url): void // <--- AGREGA EL PARAMETRO AQUÍ
     {
-        Paginator::useBootstrapFive();
+        if (config('app.env') === 'production') {
+            $url->forceScheme('https');
+        }
     }
 }
